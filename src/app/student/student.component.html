@@ -1,0 +1,40 @@
+<p>students component works</p>
+<input [id]="courseId" type="text" value="angular10">
+<br><br>
+<input id="{{courseId}}" type="text" value="angular10">
+<br><br>
+<h3>ro-one</h3>
+<!-----------------style binding----------------->
+<h2 [style.color]="'blue'">ro-one</h2>
+<h2 [style.color]="myColor">ro-one</h2>
+<h2 [style.color]="required ? 'green' : 'red' ">ro-one</h2>
+<h2 [ngStyle]="myStyles">ro-one</h2>
+<hr><hr>
+<!------------------event binding---------------->
+<br><br>
+<button (click)="onclick()" type="button">click me </button>
+<h1>{{greetings}}</h1>
+<hr><hr>
+<!---------------template reference variables-------------->
+<br><br>
+<input #msg type ="text">
+<button (click)="message(msg.value)" type="button" > login </button>
+<hr><hr>
+<!-------------- two-way data binding-------------->
+<br><br>
+<input [(ngModel)] ="data" type="text" >
+<button type="button" >click me </button>
+<br><br>
+{{data}}
+<hr><hr>
+<!----------------ngif directive---------------->
+<br><br>
+<h1 *ngIf = "status ; then trueBlock else elseBlock">Welcome</h1>
+
+<ng-template #elseBlock>
+    <h1> This is False part </h1>
+</ng-template>
+
+<ng-template #trueBlock>
+    <h1> This is True part </h1>
+</ng-template>
